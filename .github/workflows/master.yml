@@ -36,7 +36,7 @@ jobs:
       - name: update-OLX-log
         run: bash UpdateOLXLogs.sh && echo "the job completed"
         env:
-            GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             CONTACT_NUMBER: ${{ secrets.CONTACT_NUMBER }}
             OLX_URL: ${{ secrets.OLX_URL }}
             TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
