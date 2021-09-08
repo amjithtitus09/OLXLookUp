@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-repo_uri="https://amjithtitus09:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+# repo_uri="https://amjithtitus09:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+repo_uri="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 remote_name="origin"
 main_branch="master"
 target_branch="master"
