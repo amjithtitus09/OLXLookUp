@@ -11,13 +11,20 @@ cd "$GITHUB_WORKSPACE"
 git config user.name "$GITHUB_ACTOR"
 git config user.email "${GITHUB_ACTOR}@bots.github.com"
 
+echo "Before checkout"
 git checkout "$target_branch"
+echo "Before rebase"
+echo "$GITHUB_ACTOR"
+echo "${remote_name}/${main_branch}"
 git rebase "${remote_name}/${main_branch}"
+echo "Before OLX_crawler"
 
 # chmod +x scrape && ./scrape
 python OLX_crawler.py
+echo "Before add"
 
 git add ad_id_list.txt
+echo "After add"
 
 set +e 
 git status | grep 'new file\|modified'
